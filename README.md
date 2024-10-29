@@ -24,7 +24,7 @@ The preprocessing pipeline for raw fNIRS data includes the following steps:
 6. **Detrending** the filtered signal to remove residual trends.
 7. **Normalization** of the data for consistency across samples.
 8. **Generating temporal graphs** with nodes as fNIRS channels and edges representing functional connectivity.
-9. **Feature selection** using the Mann-Whitney test and XGBoost to identify key signal features.
+9. **Feature selection** using the Mann-Whitney test and XGBoost to identify key signal and functional features.
 10. **Classification** using Temporal Graph Neural Networks, such as GConvGRU.
 
 ## Getting Started
