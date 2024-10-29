@@ -13,6 +13,20 @@ This project leverages functional near-infrared spectroscopy (fNIRS) data to tra
 - **Graph Generation**: Instructions for creating temporal graphs from preprocessed data.
 - **Model Training**: Notebooks for model training and evaluation.
 
+## Preprocessing Workflow
+
+The preprocessing pipeline for raw fNIRS data includes the following steps:
+1. **Removing spikes** from the raw data.
+2. **Replacing NaN values** with a 5-second moving average.
+3. **Detrending** the signal to remove low-frequency drifts.
+4. **TDDR (Task-based Decomposition and Denoising Routine)** for noise reduction.
+5. **Bandpass filtering** to retain relevant signal frequencies.
+6. **Detrending** the filtered signal to remove residual trends.
+7. **Normalization** of the data for consistency across samples.
+8. **Generating temporal graphs** with nodes as fNIRS channels and edges representing functional connectivity.
+9. **Feature selection** using the Mann-Whitney test and XGBoost to identify key signal features.
+10. **Classification** using Temporal Graph Neural Networks, such as GConvGRU.
+
 ## Getting Started
 
 ### 1. Download the Dataset
