@@ -33,11 +33,17 @@ The preprocessing pipeline for raw fNIRS data includes the following steps:
 
 The dataset can be downloaded upon request.
 
-### 2. Using Processed Data
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Using Processed Data
 
 If you already have preprocessed data, proceed with the steps below. Otherwise, follow the preprocessing instructions to prepare your dataset.
 
-### 3. Generate Temporal Graphs
+### 4. Generate Temporal Graphs
 
 To construct temporal graphs from the preprocessed data, run the notebook:
 
@@ -45,7 +51,7 @@ To construct temporal graphs from the preprocessed data, run the notebook:
 
 This notebook prepares the data for training by generating temporal graphs where nodes represent fNIRS channels, and edges capture functional connectivity features.
 
-### 4. Train the Model and Evaluate Results
+### 5. Train the Model and Evaluate Results
 
 To train the GConvGRU model and view results, execute:
 
